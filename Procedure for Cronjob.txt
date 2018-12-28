@@ -1,0 +1,21 @@
+
+
+
+Action items for removing the old logs
+
+1. Script written for removing log files olderthan 30 days with name of purgelog.sh
+
+2. placed the purgelog.sh file in everynode in the below location.
+
+  location: /opt/Scripts/
+
+3. Added the script in crontab to execute on daily basis at 11:30 PM EST by using the command crontab -e
+
+
+### Removal of JBOSS logs more than 30 days ###
+
+30 23 * * * /opt/Scripts/purgelog.sh
+
+
+
+
