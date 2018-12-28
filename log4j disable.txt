@@ -1,0 +1,21 @@
+
+
+Add these lines to standalone.xml or domain.xml:
+
+<system-properties>
+    <property name="org.jboss.as.logging.per-deployment" value="false"/>
+</system-properties>
+
+
+
+You could (recommended) do that via CLI interface. To do so, follow these steps:
+
+cd JBOSS_HOME/bin/
+/jboss-cli.sh
+connect
+/system-property=org.jboss.as.logging.per-deployment:add(value=false). Output: {"outcome" => "success"}
+You should see applied these changes in your standalone.xml or domain.xml.
+
+
+
+
